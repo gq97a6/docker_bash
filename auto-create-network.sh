@@ -2,7 +2,8 @@
 
 # --- Configuration ---
 # Name of the file containing network names
-FILE="/own/docker/networks.yml"
+DIR="$(dirname "${BASH_SOURCE[0]}")"
+FILE="$DIR/../networks.yml"
 # Define the network prefix to check against
 NETWORK_PREFIX="172.16"
 
