@@ -3,4 +3,5 @@ bash /sync/docker/scripts/auto-create-network.sh;
 cd /sync/docker/compose;
 sudo systemctl restart containerd;
 sudo systemctl restart docker;
-docker compose -f *.yml up -d;
+
+for f in *.yml; do docker compose -f $f up -d; done;
